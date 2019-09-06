@@ -12,15 +12,14 @@ public class Distance{
         double y2;
         double res;
 
-        String[] coord1;
-        String[] coord2;
 
-        
 
-        System.out.println("Enter coordinate set 1 'x,y'");
-        coord1 = input.nextLine;
-        String[] ccoord1 = s.split(",");
-        for (String t : coord1);
-        System.out.println(t);
+        String[] coord1 = input.nextLine();
+        String delims = "[,]";
+        String[] tokens = coord1.split(delims);
+
+
+        for (int i = 0; i < coord1.length; i++) 
+        System.out.println("Element at index " + i +  " : "+ coord1[i]);
     }
 }
