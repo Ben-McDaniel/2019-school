@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class AverageCalculator{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in); 
-        int one; 
-        int two;
-        int three;
-        int average;
+        double one; 
+        double two;
+        double three;
+        double average;
 
         System.out.println("Enter number 1: "); 
-        one = input.nextInt(); 
+        one = input.nextDouble(); 
         System.out.println("Enter number 2: "); 
-        two = input.nextInt(); 
+        two = input.nextDouble(); 
         System.out.println("Enter number 3: "); 
-        three = input.nextInt(); 
+        three = input.nextDouble(); 
 
         average = (one + two + three)/3;
 
