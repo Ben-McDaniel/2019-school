@@ -20,7 +20,7 @@ def main():
     numcurrent = 1;
     numpast = 0;
     numnext = 1;
-    while i <= 10000000:
+    while i <= 10000:
         print(numnext)
         numnext = numcurrent + numpast
         numpast = numcurrent

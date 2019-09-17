@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - U1FPA",
+            "request": "launch",
+            "mainClass": "U1FPA",
+            "projectName": "Comp Sci A_a187d765"
+        }
+    ]
+}
