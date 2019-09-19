@@ -22,7 +22,7 @@ public class ProgrammingProjectPartA {
         System.out.println("Rectangle Perimeter = " + rect1.getPerimeter());
         System.out.println("Rectangle Location = " + rect1.getPosition());
         rect1.moveTo(10,10);
-        System.out.println("Rectangle Location = " + rect1.getPosition());
+        System.out.println("Rectangle Location, when moved to '10,10' = " + rect1.getPosition());
         //NOTE: You have to look at the Rectangle class to find out
         //how to construct a Rectangle object
 
@@ -33,7 +33,20 @@ public class ProgrammingProjectPartA {
         
         //After completing the requirements for the Rectangle part,
         //do the same things for the Circle part(input, output, etc.)
-        
-        
+        System.out.println("--------------------------------------");
+        System.out.println("Circle");
+        System.out.println("Enter the X location: ");
+        int cirx = input.nextInt();
+        System.out.println("Enter the Y Location: ");
+        int ciry = input.nextInt();
+        System.out.println("Enter the Radius of the Circle: ");
+        int radius = input.nextInt();
+
+        Circle circle1 = new Circle(cirx,ciry,radius);
+        System.out.println("Circle Area = " + circle1.getArea());
+        System.out.println("Circle Perimeter = " + circle1.getPerimeter());
+        System.out.println("Circle Location = " + circle1.getPosition());
+        circle1.moveTo(10,10);
+        System.out.println("Rectangle Location, when moved to '10,10' = " + circle1.getPosition());
     }
 }
