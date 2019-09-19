@@ -16,28 +16,31 @@ def writeToJSONFile(path, fileName, data):
 
 
 def main():
+
+
+
     i = 1;
     numcurrent = 1;
     numpast = 0;
     numnext = 1;
-    while i <= 10000:
+    while i <= 100000:
         print(numnext)
         numnext = numcurrent + numpast
         numpast = numcurrent
         numcurrent = numnext
          
 
-        path = './'
-        fileName = 'fibnumbers'
+ #       path = './'
+  #      fileName = 'fibnumbers'
+#
+#
+ #       data = {}
+  #      data['SequenceNum'] = i
+   #     data['FibNum'] = numcurrent
 
 
-        data = {}
-        data['SequenceNum'] = i
-        data['FibNum'] = numcurrent
 
-
-
-        writeToJSONFile(path, fileName, data)
+    #    writeToJSONFile(path, fileName, data)
         i += 1 
     print("Completed in %s seconds" % (time.time() - start_time))
 
