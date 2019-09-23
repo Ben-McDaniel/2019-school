@@ -3,12 +3,9 @@ import java.util.Scanner;
 public class a{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
-        char one = 'a';
-        char two = 'b';
-
-        if (two < one){
-            System.out.println(one);
-            System.out.println(two);
-        }
+        int iResault, num1 = 25, num4 = 5;
+        double fResault, vall = 17.0, vall2 = 12.78;
+        fResault = vall / vall2;
+       System.out.println(fResault);
     }
 }
