@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 public class Energy{
     public static void main(String[]args){
+
+
+        if (20 > 18) 
+            System.out.println("20 is greater than 18"); // obviously
+
         Scanner input = new Scanner(System.in);
         double mass;
         double Energy;
@@ -23,6 +28,9 @@ public class Energy{
         System.out.println("The energy produced in Joules is: " + Energy);
 
         System.out.println("The number of 100-watt light bulbs powered is: " + bulbs);
+
+
+
 
     }
 }
