@@ -5,21 +5,27 @@ import java.util.Scanner;
 public class AverageCalculator{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in); 
-        double one; 
-        double two;
-        double three;
-        double average;
+        double value, sum, average, count;
+        value = 2;
+        sum = 0;
+        count = 0;
 
-        System.out.println("Enter number 1: "); 
-        one = input.nextDouble(); 
-        System.out.println("Enter number 2: "); 
-        two = input.nextDouble(); 
-        System.out.println("Enter number 3: "); 
-        three = input.nextDouble(); 
 
-        average = (one + two + three)/3;
+            while (value != 0 && count != 3) {
+                System.out.println("Enter a Number (0 to quit): "); 
+                value = input.nextDouble(); 
+                sum += value;
+                count++;
+            }
 
-        System.out.println("The Average is: " + average);
+        if (value == 0){
+            System.exit(0);
+        }
+        else{
+            average = (sum)/3;
+            System.out.println("The Average is: " + average);
+        }
+        
 
     }
 }
