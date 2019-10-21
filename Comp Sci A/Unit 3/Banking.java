@@ -37,9 +37,12 @@ public class Banking{
         System.out.println("Open an account");
         System.out.print("Enter Your Name: ");
         String name = input.nextLine();
-        System.out.print("Enter Account Number; ");
+        System.out.print("Enter 5-Digit Account Number: ");
+        int userAcctNum = input.nextInt();
 
-
+        Account acct4 = new Account (name, userAcctNum, 0.0);
+        System.out.println("Your New Account Info:");
+        System.out.println(acct4);
 
     }
 }
