@@ -11,7 +11,11 @@ public class Account{
     private double balance;
     private String name;
 
-
+    public double transferTo (Account account, double amount){
+        withdraw(amount, 0.0);
+        account.deposit(amount);    
+        return balance;
+    }
 
     public Account (String owner, int account, double initial){
         name = owner;

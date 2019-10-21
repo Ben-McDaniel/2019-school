@@ -1,7 +1,10 @@
 //Ben McDaniel
 
+import java.util.Scanner;
+
 public class Banking{
     public static void main(String[]args){
+        Scanner input = new Scanner(System.in);
         Account acct1 = new Account ("Ted Murphy", 72354, 102.56);
         Account acct2 = new Account ("Anita Gomez", 69713, 40.00);
         Account acct3 = new Account ("Sanchit Reddy", 793757, 759.32);
@@ -22,5 +25,21 @@ public class Banking{
         System.out.println(acct1);
         System.out.println(acct2);
         System.out.println(acct3);
+
+
+        System.out.println();
+        System.out.println("Transfering $10 from account 1 to account 2: ");
+        acct1.transferTo(acct2, 10);
+        System.out.println(acct1);
+        System.out.println(acct2);
+
+        System.out.println();
+        System.out.println("Open an account");
+        System.out.print("Enter Your Name: ");
+        String name = input.nextLine();
+        System.out.print("Enter Account Number; ");
+
+
+
     }
 }
