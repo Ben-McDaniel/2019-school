@@ -14,10 +14,11 @@ public class Pig{
         int choice = 1;
         int pointsEarned = 0;
         int tempTotal;
-
+        int whatever;
         int[] ret = cpu.roll();
         int temp1;
         int temp2;
+        int cpuCheck = 0;
   
 
 
@@ -29,13 +30,17 @@ public class Pig{
 
                 if (ret[0] == 1 && ret[1] == 1){
                     playerCount = 0;
-                    System.out.println("TWO ZEROS! You loose all points");
+                    System.out.println("TWO Ones! You loose all points");
                     System.out.println("Your new total is " + playerCount);
+                    System.out.println("Computer's Turn To Roll (any number to contune)");
+                    whatever = input.nextInt();
                     choice = 0;
                 } else if (ret[0] == 1 || ret[1] == 1){
-                    System.out.println("Aww you rolled a Zero, now its Computers Turn");
+                    System.out.println("Aww you rolled a One and lost all points from this turn, now its Computers Turn");
                     playerCount -= pointsEarned;
                     System.out.println("Your new total is " + playerCount);
+                    System.out.println("Computer's Turn To Roll (any number to contune)");
+                    whatever = input.nextInt();
                     choice = 0;
                 }else {
                     temp1 = ret[0];
@@ -50,32 +55,37 @@ public class Pig{
                 }
             } else{
                 //cpu loop
+                System.out.println("============================================================================");
                 pointsEarned = 0;
-                while (pointsEarned < 20 && cpuCount < 100){
+                while (pointsEarned < 20 && cpuCount < 100 && cpuCheck != 1){
                     ret = cpu.roll();
-                if (ret[0] == 1 && ret[1] == 1){
-                    cpuCount = 0;
-                    System.out.println("TWO ZEROS! Computer looses all points");
-                    System.out.println("Computers new total is " + cpuCount);
-                    choice = 0;
-                } else if (ret[0] == 1 || ret[1] == 1){
-                    System.out.println("Computer you rolled a Zero, now its Your Turn");
-                    cpuCount -= pointsEarned;
-                    System.out.println("Computers new total is " + cpuCount);
-                    choice = 0;
-                }else{
-                    temp1= ret[0];
-                    temp2 = ret[1];
-                    tempTotal = temp1 + temp2;
-                    pointsEarned += tempTotal;
-                    cpuCount += temp1 + temp2;
-                    System.out.println("CPU rolled " + tempTotal + " points");
-                    System.out.println(cpuCount);
+                    if (ret[0] == 1 && ret[1] == 1){
+                        cpuCount = 0;
+                        System.out.println("TWO Ones! Computer looses all points");
+                        System.out.println("Computers new total is " + cpuCount);
+                        cpuCheck = 1;
+                    } else if (ret[0] == 1 || ret[1] == 1){
+                        System.out.println("Computer rolled a One and looses all points from this turn, now its Your Turn");
+                        cpuCount -= pointsEarned;
+                        System.out.println("Computers new total is " + cpuCount);
+                        cpuCheck = 1;
+                    }else{
+                        temp1= ret[0];
+                        temp2 = ret[1];
+                        tempTotal = temp1 + temp2;
+                        pointsEarned += tempTotal;
+                        cpuCount += temp1 + temp2;
+                        System.out.println("CPU rolled " + tempTotal + " points");
+                        System.out.println("Computers new total is " + cpuCount);
+                    }
                 }
-                System.out.println("Your Turn To Roll");
+                System.out.println("============================================================================");
+                System.out.println("Computer passes to you. Your Turn To Roll (any number to contune)");
+                whatever = input.nextInt();
                 choice = 1;
                 pointsEarned = 0;
-                }
+                cpuCheck = 0;
+
             }
         }
     
