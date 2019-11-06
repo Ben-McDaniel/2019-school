@@ -12,7 +12,7 @@ public class Tutor{
         int symbol = rand.nextInt(4);
         double correct = 0;
         double guess;
-
+        
         System.out.println("Enter The Correct Answer");
 
         if (symbol == 0){

@@ -9,7 +9,6 @@ public class Code{
     public StringBuilder finalCode = new StringBuilder("");
     public Code(String code){
         myCode = code.toCharArray();
-        char[] x = { 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'};
         
     }
 
@@ -40,7 +39,6 @@ public class Code{
 
     public void recover(int p1, int p2){
         for (int i = 0; i < myCode.length; i++){
-            //
             if (i >= p1 && i < p2 ){
                 finalCode.append(myCode[i]);
             } else{
