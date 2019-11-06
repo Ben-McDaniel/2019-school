@@ -10,9 +10,9 @@ public class PairOfDice{
     private int check1, check2;
 
     
-    public static char[] roll(){
+    public int[] roll(){
         int number1 = d6a.roll(6);
-        int number1 = d6a.roll(6);
+        int number2 = d6b.roll(6);
         return new int[] {number1, number2};       
     }
 
