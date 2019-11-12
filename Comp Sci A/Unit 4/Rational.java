@@ -25,7 +25,7 @@ public class Rational{
     }
 
     public int getDenominator() {
-        return demoninator;
+        return(denominator);
     }
 
     public Rational reciprocal() {
@@ -38,7 +38,7 @@ public class Rational{
         int numerator2 = op2.getNumerator() * denominator;
         int sum = numerator1 + numerator2;
 
-        return new Rational(sun, commonDenominator);
+        return new Rational(sum, commonDenominator);
     }
 
     public Rational subtract(Rational op2){
@@ -69,7 +69,7 @@ public class Rational{
         String result;
 
         if (numerator == 0){
-            result = 0;
+            result = "0";
         } else{
             if (denominator == 1){
                 result = numerator + "";
