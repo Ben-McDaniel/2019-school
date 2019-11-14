@@ -33,6 +33,7 @@ public class RationalTester{
         System.out.println("2 for subtraction");
         System.out.println("3 for multiplication");
         System.out.println("4 for division");
+        System.out.println("5 for comparison");
 
         opperation = input.nextInt();
         System.out.println("====================================================");
@@ -45,6 +46,15 @@ public class RationalTester{
             System.out.println(nume1 + "/" + denom1 + " * " + nume2 + "/" + denom2 + " = " + frac1.multiply(frac2));
         }else if (opperation == 4){
             System.out.println(nume1 + "/" + denom1 + " / " + nume2 + "/" + denom2 + " = " + frac1.divide(frac2));
+        }else if (opperation == 5){
+            int res = frac1.Compare(nume1, denom1, nume2, denom2);
+            if (res == 1){
+                System.out.println(nume1 + "/" + denom1 + " > " + nume2 + "/" + denom2);
+            }else if (res == 2){
+                System.out.println(nume1 + "/" + denom1 + " < " + nume2 + "/" + denom2);
+            }else if (res == 3){
+                System.out.println(nume1 + "/" + denom1 + " = " + nume2 + "/" + denom2);
+            }
         }
 
     }

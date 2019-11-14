@@ -102,18 +102,34 @@ public class Rational{
     }
 
 
+    public int Compare(int n1, int d1, int n2, int d2){
+        if(d1 < 0){
+            d1 = d1 * -1;
+            n1 = n1 * -1;
+        }
+
+        if (d2 < 0){
+            d2 = d2 * -1;
+            n2 = n2 * -1;
+        }
+
+        n1 = n1 * d2;
+        n2 = n2 * d1;
+
+        if (n1 > n2){
+            return(1);
+        }else if (n2 > n1){
+            return(2);
+        }else{
+            return(3);
+        }
+    }
 
 
 
-
-
-
-
-
-
-
-
-
+    public interface Comparable{
+        t
+    }
 
 
 }
