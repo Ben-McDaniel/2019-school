@@ -1,6 +1,6 @@
 //Ben McDaniel
 
-public class Rational{
+public class Rational implements Comparable{
     private int numerator, denominator;
 
     public Rational (int numer, int denom){
@@ -102,8 +102,19 @@ public class Rational{
     }
 
 
-	public double compareTo(Rational frac2) {
-		return 0;
+	public int compareTo(Object o) {
+        Rational r = (Rational) o;
+        
+        double dec = (double)numerator / denominator;
+        double decO = (double)r.numerator / r.denominator;
+
+        if (dec < decO){
+            return(-1);
+        } else if (dec > decO){
+            return(1);
+        } else {
+            return(0);
+        }
 	}
 
 

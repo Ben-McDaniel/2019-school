@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class RationalTester implements Comparable{
+public class RationalTester{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         
@@ -59,23 +59,8 @@ public class RationalTester implements Comparable{
                 System.out.println(nume1 + "/" + denom1 + " = " + nume2 + "/" + denom2);
             }
         }
-
     }
 
 
- 
-
-
-    @Override
-	public int compareTo(Object r) {
-        int result = frac1.compareTo(r);
-        
-
-
-
-
-
-		return 0;
-    }
 
 }
