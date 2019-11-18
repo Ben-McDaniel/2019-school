@@ -1,8 +1,9 @@
 //Ben McDaniel
 
+
 import java.util.*;
 
-public class RationalTester{
+public class RationalTester implements Comparable{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         
@@ -36,6 +37,8 @@ public class RationalTester{
         System.out.println("5 for comparison");
 
         opperation = input.nextInt();
+
+
         System.out.println("====================================================");
 
         if (opperation == 1){
@@ -47,15 +50,32 @@ public class RationalTester{
         }else if (opperation == 4){
             System.out.println(nume1 + "/" + denom1 + " / " + nume2 + "/" + denom2 + " = " + frac1.divide(frac2));
         }else if (opperation == 5){
-            int res = frac1.Compare(nume1, denom1, nume2, denom2);
-            if (res == 1){
+            int res = (int) frac1.compareTo(frac2);
+            if (res > 0){
                 System.out.println(nume1 + "/" + denom1 + " > " + nume2 + "/" + denom2);
-            }else if (res == 2){
+            }else if (res < 0){
                 System.out.println(nume1 + "/" + denom1 + " < " + nume2 + "/" + denom2);
-            }else if (res == 3){
+            }else if (res == 0){
                 System.out.println(nume1 + "/" + denom1 + " = " + nume2 + "/" + denom2);
             }
         }
 
     }
+
+
+ 
+
+
+    @Override
+	public int compareTo(Object r) {
+        int result = frac1.compareTo(r);
+        
+
+
+
+
+
+		return 0;
+    }
+
 }
