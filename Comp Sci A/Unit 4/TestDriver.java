@@ -13,17 +13,17 @@ public class TestDriver{
         Test obj3 = new Test(0,0);
         Test obj4 = new Test(0,0);
         Test obj5 = new Test(0,0);
-        System.out.println("=======================================================================");
-        System.out.println("Name    Priority   Complexity");
-        System.out.println("Object1    " + obj1.getPriority() + "            " + obj1.getComplexity()); 
-        System.out.println("Object2    " + obj2.getPriority() + "            " + obj2.getComplexity()); 
-        System.out.println("Object3    " + obj3.getPriority() + "            " + obj3.getComplexity()); 
-        System.out.println("Object4    " + obj4.getPriority() + "            " + obj4.getComplexity()); 
-        System.out.println("Object5    " + obj5.getPriority() + "            " + obj5.getComplexity()); 
-        System.out.println("=======================================================================");
-
 
         while (choice != 0){
+            System.out.println("=======================================================================");
+            System.out.println("Name    Priority   Complexity");
+            System.out.println("Object1    " + obj1.getPriority() + "            " + obj1.getComplexity()); 
+            System.out.println("Object2    " + obj2.getPriority() + "            " + obj2.getComplexity()); 
+            System.out.println("Object3    " + obj3.getPriority() + "            " + obj3.getComplexity()); 
+            System.out.println("Object4    " + obj4.getPriority() + "            " + obj4.getComplexity()); 
+            System.out.println("Object5    " + obj5.getPriority() + "            " + obj5.getComplexity()); 
+            System.out.println("=======================================================================");
+    
             System.out.println("Change Priority (1) Change Complexity (2) Exit (0)");
             choice = in.nextInt();
 
@@ -77,9 +77,14 @@ public class TestDriver{
                 }
             }
         }
-        
+
         System.out.println("=======================================================================");
 
+        if (obj1.getPriority() < obj2.getPriority()){
+            System.out.println("Object two is more of a priority");
+        } else {
+            System.out.println("Object one is more of a priority");
+        }
 
 
     }

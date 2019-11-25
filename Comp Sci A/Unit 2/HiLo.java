@@ -9,7 +9,7 @@ public class HiLo{
         int counter = 1;
         int cpuNum, playerNum;
 
-        cpuNum = (int)((101-1 + 1) * Math.random() + 1);
+        cpuNum = (int)((1001-1 + 1) * Math.random() + 1);
 
         System.out.println("Enter a Number: ");
         playerNum = input.nextInt();
