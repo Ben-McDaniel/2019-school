@@ -1,9 +1,10 @@
 
 import java.uitl.*;
 
-public class Coin implements Lockable{
+public class Coin {
     private final int HEADS = 0;
     private final int TAILS = 1;
+    int status = 0;
 
     private int face;
 
@@ -29,8 +30,22 @@ public class Coin implements Lockable{
         return faceName;
     }
 
-    public boolean locked() {
-        // TODO Auto-generated method stub
-        return false;
+    public void setKey(int k){
+        int key = k;
     }
+
+    public int lock(int k){
+        if (k == key){
+
+        }
+    }
+
+    public unlock(int k){
+
+    }
+
+    public static boolean locked(int k){
+
+    }
+
 }
