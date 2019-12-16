@@ -1,5 +1,7 @@
 //Ben McDaniel
 
+import java.lang.*;
+
 public class Rational implements Comparable{
     private int numerator, denominator;
 
@@ -11,7 +13,7 @@ public class Rational implements Comparable{
         if (denom < 0){
             numer = numer * -1;
             denom = denom * -1;
-        }
+        } 
 
         numerator = numer;
         denominator = denom; 
@@ -115,7 +117,8 @@ public class Rational implements Comparable{
         } else {
             return(0);
         }
-	}
+    }
+
 
 
 
