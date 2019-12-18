@@ -32,7 +32,61 @@ public class Card{
         } else if (s.equals("c")){
             suit = 2;
         } else if (s.equals("d")){
-            
+          suit = 3;  
+        } else{
+            suit = 4;
+        }
+
+        if (f.equals("a")){
+            face = 1;
+        } else if (f.equals("j")){
+            face = 11;
+        } else if (f.equals("q")){
+            face = 12;
+        } else if (f.equals("k")){
+            face = 13;
+        } else{
+            face = new Integer(f);
+        }
+    }
+
+    public String getFace(){
+        if (face == 1){
+            return "ACE";
+        } else if (face >= 2 && face <= 10){
+            return "" + face;
+        } else if (face == 11){
+            return "JACK";
+        } else if (face== 12){
+            return "QUEEN";
+        } else{
+            return "KING";
+        }
+    }
+
+    public String getSuit() {
+        if (suit == 1){
+            return "SPADES";
+        } else if (suit == 2){
+            return "CLUBS";
+        } else if (suit == 3){
+            return "DIAMONDS";
+        } else{
+            return "KING";
+        }
+    }
+
+    public String toString(){
+        return face + " of " + suit;
+    }
+
+    public boolean equals(Object o){
+        Card c = (Card) (o);
+
+        if (c.face == face && c.suit == suit){
+            return true;
+        } else{
+            return false;
         }
     }
 }
