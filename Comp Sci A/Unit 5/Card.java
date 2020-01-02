@@ -77,7 +77,7 @@ public class Card{
     }
 
     public String toString(){
-        return face + " of " + suit;
+        return face + " of " + getSuit();
     }
 
     public boolean equals(Object o){
