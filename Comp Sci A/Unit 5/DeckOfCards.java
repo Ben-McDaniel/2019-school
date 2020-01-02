@@ -1,13 +1,13 @@
 //Ben McDaniel
 
-public class Deck{
+public class DeckOfCards{
     private Card [] deck;
     private int topCard;
 
     public DeckOfCards(){
         deck = new Card[52];
         createDeck();
-        topCard = 0
+        topCard = 0;
     }
 
     private void createDeck(){
