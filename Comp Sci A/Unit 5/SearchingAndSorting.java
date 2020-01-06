@@ -5,7 +5,7 @@ import java.lang.*;
 import java.lang.reflect.Array;
 
 public class SearchingAndSorting{
-    public static int[] main(String[]args){
+    public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         int amount, num, answer = 0 ;
 
@@ -37,9 +37,9 @@ public class SearchingAndSorting{
             } else if(answer == 2){
 
             } else if(answer == 3){
-                System.out.println(selectionsort(ary));
+                System.out.println(Arrays.toString(selectionsort(ary)));
             } else if(answer == 4){
-
+                System.out.println(Arrays.toString(bubblesort(ary)));
             } else if(answer == 5){
 
             }else if(answer == 6){
@@ -47,20 +47,40 @@ public class SearchingAndSorting{
             }
         }
 
-        public static int[] selectionsort(int [] array){
-            int temp, minimum;
-            for (int index = 0; index < array.length - 1; index++){
-                minimum = index;
-                for (int scan = index + 1; scan < array.length; scan++){
-                    if (array[scan] < array[minimum]){
-                        minimum = scan;
-                    }
+       
+    }
+
+    public static int [] bubblesort(int [] array){
+        int items = 0;
+        boolean sorted = false;
+        while(!sorted){
+            sorted = true;
+            for (int j = 0; j < array.length - 1; j++){
+                items++;
+                if (array[j] > array[j + 1]){
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array [j + 1] = temp;
+                    sorted = false;
                 }
-                temp = array[minimum];
-                array[minimum] = array[index];
-                array[index] = temp;
             }
-            return array;
         }
+        return array;
+    }
+
+    public static int [] selectionsort(int [] array){
+        int temp, minimum;
+        for (int index = 0; index < array.length - 1; index++){
+            minimum = index;
+            for (int scan = index + 1; scan < array.length; scan++){
+                if (array[scan] < array[minimum]){
+                    minimum = scan;
+                }
+            }
+            temp = array[minimum];
+            array[minimum] = array[index];
+            array[index] = temp;
+        }
+        return array;
     }
 }
