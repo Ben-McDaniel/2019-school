@@ -33,21 +33,69 @@ public class SearchingAndSorting{
             answer = input.nextInt();
 
             if (answer == 1){
-
+                System.out.println("What Number are you looking for:");
+                int number = input.nextInt();
+                System.out.println("The Number is in position " + linearSearch(ary, number));
             } else if(answer == 2){
-
+                System.out.println("What Number are you looking for:");
+                int number = input.nextInt();
+                System.out.println("The Number is in position " + binarySearch(ary, number));
             } else if(answer == 3){
-                System.out.println(Arrays.toString(selectionsort(ary)));
+                selectionsort(ary);
+                System.out.println(Arrays.toString(ary));
             } else if(answer == 4){
-                System.out.println(Arrays.toString(bubblesort(ary)));
+                bubblesort(ary);
+                System.out.println(Arrays.toString(ary));
             } else if(answer == 5){
-
-            }else if(answer == 6){
-
+                insertionSort(ary);
+                System.out.println(Arrays.toString(ary));
             }
         }
 
        
+    }
+
+    public static int linearSearch(int [] array, int num){
+            int n = array.length; 
+        for(int i = 0; i < n; i++) 
+        { 
+            if(array[i] == num) 
+                return i; 
+        } 
+        return -1; 
+    }
+
+    public static int binarySearch(int [] array, int num){
+        int l = 0, r = array.length - 1; 
+        while (l <= r) { 
+            int m = l + (r - l) / 2; 
+
+            if (array[m] == num){ 
+                return m; 
+            } else if (array[m] < num){ 
+                l = m + 1; 
+            } else{
+                r = m - 1; 
+            }
+        } 
+ 
+        return -1; 
+    }
+
+    public static int [] selectionsort(int [] array){
+        int temp, minimum;
+        for (int index = 0; index < array.length - 1; index++){
+            minimum = index;
+            for (int scan = index + 1; scan < array.length; scan++){
+                if (array[scan] < array[minimum]){
+                    minimum = scan;
+                }
+            }
+            temp = array[minimum];
+            array[minimum] = array[index];
+            array[index] = temp;
+        }
+        return array;
     }
 
     public static int [] bubblesort(int [] array){
@@ -68,19 +116,21 @@ public class SearchingAndSorting{
         return array;
     }
 
-    public static int [] selectionsort(int [] array){
-        int temp, minimum;
-        for (int index = 0; index < array.length - 1; index++){
-            minimum = index;
-            for (int scan = index + 1; scan < array.length; scan++){
-                if (array[scan] < array[minimum]){
-                    minimum = scan;
-                }
-            }
-            temp = array[minimum];
-            array[minimum] = array[index];
-            array[index] = temp;
-        }
+    public static int [] insertionSort(int [] array){
+        int n = array.length; 
+        for (int i=1; i<n; ++i) 
+        { 
+            int key = array[i]; 
+            int j = i-1; 
+
+            while (j>=0 && array[j] > key) 
+            { 
+                array[j+1] = array[j]; 
+                j = j-1; 
+            } 
+            array[j+1] = key; 
+        } 
         return array;
     }
+
 }
