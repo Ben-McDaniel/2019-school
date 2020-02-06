@@ -6,7 +6,6 @@ public class ShapeArrayList{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         ArrayList<Shape> shapes = new ArrayList<Shape>();
-        int placeHolder = 0;
         boolean loop = true;
         int choice, inX, inY, r, l, w;
 
@@ -19,16 +18,15 @@ public class ShapeArrayList{
 
             choice = input.nextInt();
 
-            if (choice == 1 && placeHolder != 10){
+            if (choice == 1){
                 System.out.println("Enter x coordinate: ");
                 inX = input.nextInt();
                 System.out.println("Enter Y coordinate: ");
                 inY = input.nextInt();
                 System.out.println("Enter radius: ");
                 r = input.nextInt();
-                shapes.add(e) = new Circle(inX, inY, r);
-                placeHolder++;
-            } else if (choice == 2 && placeHolder != 10){
+                shapes.add(new Circle(inX, inY, r));
+            } else if (choice == 2){
                 System.out.println("Enter x coordinate: ");
                 inX = input.nextInt();
                 System.out.println("Enter Y coordinate: ");
@@ -37,19 +35,17 @@ public class ShapeArrayList{
                 l = input.nextInt();
                 System.out.println("Enter width: ");
                 w = input.nextInt();
-                shapes[placeHolder] = new Rectangle(inX, inY, l, w);
-                placeHolder++;
-            } else if (choice == 3 && placeHolder != 10){
+                shapes.add(new Rectangle(inX, inY, l, w));
+            } else if (choice == 3){
                 System.out.println("Enter x coordinate: ");
                 inX = input.nextInt();
                 System.out.println("Enter Y coordinate: ");
                 inY = input.nextInt();
                 System.out.println("Enter length: ");
                 l = input.nextInt();
-                shapes[placeHolder] = new Square(inX, inY, l);
-                placeHolder++;
+                shapes.add(new Square(inX, inY, l));
             } else if (choice == 4){    
-                System.out.println(Arrays.toString(shapes));
+                System.out.println(shapes);
             } else if (choice == 5){
                 loop = false;
             }
