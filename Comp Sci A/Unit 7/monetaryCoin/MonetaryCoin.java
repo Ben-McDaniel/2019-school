@@ -7,7 +7,7 @@ public class MonetaryCoin extends Coin{
         super();
         value = x;
     }
-
+ 
     public int returnValue(){
         return value;
     }
