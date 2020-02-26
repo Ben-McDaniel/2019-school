@@ -6,7 +6,7 @@ public class MonetaryCoin extends Coin{
     public MonetaryCoin(int x){
         value = x;
     }
-
+ 
     public int returnValue(){
         return value;
     }

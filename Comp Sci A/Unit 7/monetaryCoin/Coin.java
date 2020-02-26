@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Coin{
     private final int HEADS = 0;
-    private final int TAILS = 1;
+    private final int TAILS = 1; 
     private boolean status = true;
     private int key;
 

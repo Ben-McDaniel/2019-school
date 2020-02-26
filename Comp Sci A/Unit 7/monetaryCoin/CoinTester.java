@@ -5,7 +5,7 @@ public class CoinTester{
         int total;
         MonetaryCoin c1 = new MonetaryCoin(5);
         MonetaryCoin c2 = new MonetaryCoin(11);
-        MonetaryCoin c3 = new MonetaryCoin(43);
+        MonetaryCoin c3 = new MonetaryCoin(43); 
 
 
         total = c1.returnValue() + c2.returnValue() + c3.returnValue();
