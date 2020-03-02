@@ -8,9 +8,13 @@ public class techJournal extends readingMaterials{
     
     public String canIUseThis(){
         if(isCurrentInfo){
-            return("Its current, go ahead");
+            return("is current");
         } else{
-            return("This isnt current info, do not use");
+            return("isnt current info");
         }
+    }
+
+    public String techJournalInfo(){
+        return(title + ", written by " + author + " " + this.canIUseThis() + ", and is " + numPages + " pages long");
     }
 }
