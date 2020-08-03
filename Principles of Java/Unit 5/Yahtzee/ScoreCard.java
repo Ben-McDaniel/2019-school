@@ -21,7 +21,7 @@ public class ScoreCard {
     //of all known "items" that can be scored)
     public int convertToIndex(String item) {
         if (item.trim().equalsIgnoreCase("1"))
-            return 0;
+            return 0;2
         if (item.trim().equalsIgnoreCase("2"))
             return 1;
         if (item.trim().equalsIgnoreCase("3"))

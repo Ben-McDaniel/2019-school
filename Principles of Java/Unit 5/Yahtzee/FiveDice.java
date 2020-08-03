@@ -1,4 +1,4 @@
- //Designed and Written by Mr. Mosier
+//Designed and Written by Mr. Mosier
 //Written for Principles of Java Programming course
 public class FiveDice {
     private Die fivedice[];
@@ -321,6 +321,24 @@ public class FiveDice {
                fivedice[2] + " " +
                fivedice[3] + " " +
                fivedice[4];
-    } 
+    }
+    
+    //Description: Creates spaces between each component
+    public String createSpaces(int length) {
+        String result = "";
+        for (int i = 0; i < length; i++) {
+            result = result + " ";
+        }
+        return result;
+    }
+    
+    //Description: Returns numeric values representing dice objects
+    public String getDiceNumbers() {
+        String result = "";
+        for (int num = 1; num < 6; num++) {
+            result = result + num + createSpaces(getTextDie(num).length());
+        }
+        return result;
+    }
     
 }
