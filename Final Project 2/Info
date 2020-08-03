@@ -1,0 +1,30 @@
+Username
+BenOMHS1
+Password
+SecurePassword123
+
+
+
+How to compile:
+
+javac -cp ./lib/twitter4j-core-4.0.7.jar:. OMHSTwitterAPI.java
+
+java -cp ./lib/twitter4j-core-4.0.7.jar:. OMHSTwitterAPI.java
+
+
+
+General Info:
+-I have marked the classes which I wrote at the top, the rest were a part of the twitter4j package
+
+-After many hours of working with brenden, the only way I was able to get this program to complie was to 
+place the file "twitter4j-core-4.0.7.jar" into a folder called "lib" and compiling it using the commands above
+
+-I have shared the program exactally how it needs to be organized with you on Google Drive
+
+
+
+todo
+-send custom tweets
+-read most recent tweet from any account
+-hcpss auto tweet
+-possibly get past x tweets from account
